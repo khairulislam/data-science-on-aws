@@ -26,7 +26,7 @@ def build_feature_transform():
                 'multicolumntfidfvectorizer',
                 MultiColumnTfidfVectorizer(
                     max_df=0.9941,
-                    min_df=0.01,
+                    min_df=0.01601423487544484,
                     analyzer='word',
                     max_features=10000
                 )
