@@ -7,3 +7,4 @@ dependencies:
   - ipykernel
   - ipywidgets
   - pip
+  - scikit-learn
