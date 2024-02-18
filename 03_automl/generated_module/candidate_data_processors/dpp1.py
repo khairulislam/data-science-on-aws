@@ -27,7 +27,7 @@ def build_feature_transform():
                 'multicolumntfidfvectorizer',
                 MultiColumnTfidfVectorizer(
                     max_df=0.99,
-                    min_df=0.01601423487544484,
+                    min_df=0.01,
                     analyzer='char_wb',
                     max_features=10000
                 )
