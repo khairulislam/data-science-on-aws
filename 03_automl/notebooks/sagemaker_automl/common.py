@@ -130,9 +130,13 @@ def select_inference_output(problem_type, model_containers, output_keys):
             algo_keys.append(key.strip())
 
     if len(bad_keys):
-        raise ValueError('Requested inference output keys [{}] are unsupported. '
-                         'The supported inference keys are [{}]'.format(
-                            ', '.join(bad_keys), ', '.format(ALLOWED_INVERSE_TRANSFORM_KEYS[problem_type])))
+        raise ValueError(
+            "Requested inference output keys [{}] are unsupported. "
+            "The supported inference keys are [{}]".format(
+                ", ".join(bad_keys),
+                ", ".join(ALLOWED_INVERSE_TRANSFORM_KEYS[problem_type]),
+            )
+        )
 
     model_containers[1].env.update({
         'SAGEMAKER_DEFAULT_INVOCATIONS_ACCEPT': 'text/csv',
